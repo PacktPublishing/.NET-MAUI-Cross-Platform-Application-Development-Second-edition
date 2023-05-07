@@ -1,5 +1,14 @@
-﻿<Shell>
-    <ShellContent Title="Home">
-        <MainPage />
-    </ShellContent>
+﻿@page "/root"
+@using PassXYZ.Vault.Pages
+
+<Shell>
+    <TabBar>
+        <ShellContent Route="LoginPage"><LoginPage /></ShellContent>
+    </TabBar>
+    <FlyoutItem Route="AboutPage" Title="About">
+        <ShellContent><AboutPage /></ShellContent>
+    </FlyoutItem>
+    <FlyoutItem Route="RootPage" Title="Browse">
+        <ShellContent><ItemsPage /></ShellContent>
+    </FlyoutItem>
 </Shell>

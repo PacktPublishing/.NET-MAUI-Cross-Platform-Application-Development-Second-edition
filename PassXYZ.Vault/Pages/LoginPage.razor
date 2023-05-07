@@ -1,0 +1,19 @@
+﻿@page "/login"
+@using MC = Microsoft.Maui.Controls
+
+<ContentPage>
+    <VerticalStackLayout VerticalOptions="LayoutOptions.Center" Padding="10">
+        <Button VerticalOptions="LayoutOptions.Center" OnClick="OnLoginClicked">
+            Login
+        </Button>
+    </VerticalStackLayout>
+</ContentPage>
+
+@code {
+    private async void OnLoginClicked()
+    {
+        //await NavigationManager.NavigateToAsync("/main");
+        await MC.Shell.Current.GoToAsync("//AboutPage");
+    }
+
+}

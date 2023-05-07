@@ -1,14 +1,32 @@
 ﻿@page "/root"
 @using PassXYZ.Vault.Pages
+@using PassXYZ.Vault.Resources.Styles
 
 <Shell>
     <TabBar>
         <ShellContent Route="LoginPage"><LoginPage /></ShellContent>
     </TabBar>
-    <FlyoutItem Route="AboutPage" Title="About">
+    <FlyoutItem Route="AboutPage" Title="About" Icon="@(new FontImageSource{FontFamily = "FontAwesomeSolid",
+              Color=Colors.Black, Glyph=FontAwesomeSolid.Question})">
         <ShellContent><AboutPage /></ShellContent>
     </FlyoutItem>
-    <FlyoutItem Route="RootPage" Title="Browse">
+    <FlyoutItem Route="RootPage" Title="Browse" Icon="@(new FontImageSource{FontFamily = "FontAwesomeSolid",
+              Color=Colors.Black, Glyph=FontAwesomeSolid.Home})">
         <ShellContent><ItemsPage /></ShellContent>
     </FlyoutItem>
+
+    <MenuItem Text="Logout" OnClick="OnMenuItemClicked"
+              IconImageSource="@(new FontImageSource{FontFamily = "FontAwesomeSolid", 
+              Color=Colors.Black, Glyph=FontAwesomeSolid.SignOutAlt})">
+        
+    </MenuItem>
 </Shell>
+
+@code {
+    private async void OnMenuItemClicked()
+    {
+        //await NavigationManager.NavigateToAsync("/main");
+        await MC.Shell.Current.GoToAsync("//LoginPage");
+    }
+
+}

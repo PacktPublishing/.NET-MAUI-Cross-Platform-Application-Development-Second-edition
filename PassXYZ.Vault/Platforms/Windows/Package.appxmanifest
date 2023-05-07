@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Package
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
@@ -6,13 +7,16 @@
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
   IgnorableNamespaces="uap rescap">
 
-  <Identity Name="maui-package-name-placeholder" Publisher="CN=PassXYZ" Version="0.0.0.1" />
+  <Identity
+    Name="8606B3B5-C03C-41D7-825F-B33718CF791C"
+    Publisher="CN=Roger Ye (叶树杲)"
+    Version="0.3.1.0" />
   <mp:PhoneIdentity PhoneProductId="74832D54-DC81-40D7-A436-EE13D19C3125" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>PassXYZ.Vault2</DisplayName>
-    <PublisherDisplayName>PassXYZ.Vault2</PublisherDisplayName>
-    <Logo>$placeholder$.png</Logo>
+    <PublisherDisplayName>Roger Ye (叶树杲)</PublisherDisplayName>
+    <Logo>Assets\appiconStoreLogo.png</Logo>
   </Properties>
 
   <Dependencies>
@@ -26,14 +30,10 @@
 
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="$targetentrypoint$">
-      <uap:VisualElements
-        DisplayName="$placeholder$"
-        Description="$placeholder$"
-        Square150x150Logo="$placeholder$.png"
-        Square44x44Logo="$placeholder$.png"
-        BackgroundColor="transparent">
+      <uap:VisualElements  
+        DisplayName="PassXYZ.Vault2" 
+        Description="PassXYZ.Vault built with .NET MAUI">
         <uap:DefaultTile Square71x71Logo="$placeholder$.png" Wide310x150Logo="$placeholder$.png" Square310x310Logo="$placeholder$.png" />
-        <uap:SplashScreen Image="$placeholder$.png" />
       </uap:VisualElements>
     </Application>
   </Applications>

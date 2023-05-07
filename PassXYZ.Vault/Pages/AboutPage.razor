@@ -2,11 +2,36 @@
 @using MC = Microsoft.Maui.Controls
 
 <ContentPage>
-    <VerticalStackLayout>
-        <Label>AboutPage</Label>
-    </VerticalStackLayout>
+    <Grid RowDefinitions="Auto, *">
+        <GridCell Row="0">
+            <VerticalStackLayout>
+                <Image Source="@(new FileImageSource{File = "passxyz_logo.png"})"
+                       VerticalOptions="LayoutOptions.Center"
+                       HeightRequest="128" />
+            </VerticalStackLayout>
+        </GridCell>
+        <GridCell Row="1">
+            <ScrollView>
+                <VerticalStackLayout Padding="new Thickness(30,24,30,24)" Spacing="10">
+                    <Label Text="Start developing now" FontSize="24" FontAttributes="FontAttributes.Bold" />
+                    <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!"
+                           FontSize="16" Padding="new Thickness(0,0,0,0)" />
+
+                    <Label FontSize="16" Padding="new Thickness(0,24,0,0)">
+                        <Span Text="Learn more at " />
+                        <Span Text="https://learn.microsoft.com/en-us/dotnet/maui/?view=net-maui-7.0" FontAttributes="FontAttributes.Bold" />
+                    </Label>
+                    <Button Margin="new Thickness(0,10,0,0)" Text="Learn more"
+                            OnClick="OpenWebClicked" />
+                </VerticalStackLayout>
+            </ScrollView>
+        </GridCell>
+    </Grid>
 </ContentPage>
 
 @code {
-
+    private async Task OpenWebClicked()
+    {
+        await Browser.OpenAsync("https://learn.microsoft.com/en-us/dotnet/maui/?view=net-maui-7.0");
+    }
 }

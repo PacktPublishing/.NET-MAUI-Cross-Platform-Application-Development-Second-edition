@@ -1,12 +1,22 @@
 ﻿@page "/items"
+
+@using System.Collections.ObjectModel
+@using Microsoft.Extensions.Logging
 @using MC = Microsoft.Maui.Controls
+@using PassXYZ.Vault.Models
+@using PassXYZ.Vault.Pages
+@using PassXYZ.Vault.Services
 
-<ContentPage>
-    <VerticalStackLayout>
-        <Label>ItemsPage</Label>
-    </VerticalStackLayout>
+
+<ContentPage OnAppearing="OnAppearing">
+    <ListView ItemsSource="Items">
+        <ItemTemplate>
+            <ViewCell>
+                <StackLayout>
+                    <Label>@context.Name</Label>
+                    <Label>@context.Description</Label>
+                </StackLayout>
+            </ViewCell>
+        </ItemTemplate>
+    </ListView>
 </ContentPage>
-
-@code {
-
-}

@@ -3,6 +3,7 @@
 @using System.Collections.ObjectModel
 @using Microsoft.Extensions.Logging
 @using MC = Microsoft.Maui.Controls
+@using PassXYZ.Vault.Resources.Styles
 @using PassXYZ.Vault.Models
 @using PassXYZ.Vault.Pages
 @using PassXYZ.Vault.Services
@@ -11,12 +12,7 @@
 <ContentPage OnAppearing="OnAppearing">
     <ListView ItemsSource="Items">
         <ItemTemplate>
-            <ViewCell>
-                <StackLayout>
-                    <Label>@context.Name</Label>
-                    <Label>@context.Description</Label>
-                </StackLayout>
-            </ViewCell>
+            <ItemViewCell Item="@context"></ItemViewCell>
         </ItemTemplate>
     </ListView>
 </ContentPage>

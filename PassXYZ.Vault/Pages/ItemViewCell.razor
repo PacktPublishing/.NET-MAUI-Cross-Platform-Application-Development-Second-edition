@@ -1,0 +1,32 @@
+﻿@using Microsoft.Extensions.Logging
+@using PassXYZ.Vault.Models
+@using PassXYZ.Vault.Resources.Styles
+
+@inject Navigation Navigation
+@inject ILogger<ItemsPage> logger
+
+<ViewCell OnTapped="OnTap">
+    <Grid Padding="5" ColumnDefinitions="Auto,Auto" RowDefinitions="Auto,Auto"
+          VerticalOptions="LayoutOptions.FillAndExpand"
+          HorizontalOptions="LayoutOptions.FillAndExpand">
+        <GridCell Row="0" Column="0" RowSpan="2">
+            <Image Margin="10" Source="@(new FontImageSource{FontFamily = "FontAwesomeSolid",
+                            Color=Colors.Black, Glyph=FontAwesomeSolid.PencilAlt})" />
+        </GridCell>
+        <GridCell Row="0" Column="1">
+            <Label FontAttributes="FontAttributes.Bold">@Item.Name</Label>
+        </GridCell>
+        <GridCell Row="1" Column="1">
+            <Label>@Item.Description</Label>
+        </GridCell>
+    </Grid>
+</ViewCell>
+
+@code {
+    [Parameter] public Item Item { get; set; }
+    private async Task OnTap()
+    {
+        logger.LogDebug("OnTapped: {Name} is tapped", Item.Name);
+        await Navigation.PushModalAsync(@<ItemDetailPage Item="Item" />);
+    }
+}

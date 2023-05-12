@@ -1,5 +1,6 @@
 using System.Collections.ObjectModel;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
 using Microsoft.Extensions.Logging;
 using PassXYZ.Vault.Models;
 using PassXYZ.Vault.Services;
@@ -8,11 +9,11 @@ namespace PassXYZ.Vault.Pages
 {
     public partial class ItemsPage : ComponentBase
     {
-        public List<Item> Items { get; set; }
         [Inject]
         IDataStore<Item> dataStore { get; set; }
         [Inject]
         ILogger<ItemsPage> logger { get; set; }
+        public List<Item> Items { get; set; }
 
         void OnAppearing()
         {
@@ -21,7 +22,6 @@ namespace PassXYZ.Vault.Pages
 
         protected override async Task OnInitializedAsync()
         {
-            //await Task.Delay(5000);
             Items = await dataStore.GetItemsAsync(true);
             StateHasChanged();
         }

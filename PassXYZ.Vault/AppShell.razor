@@ -23,10 +23,17 @@
 </Shell>
 
 @code {
+    public AppShell()
+    {
+        Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
+        Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+        Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
+        Routing.RegisterRoute(nameof(ItemsPage), typeof(ItemsPage));
+    }
+
     private async void OnMenuItemClicked()
     {
         //await NavigationManager.NavigateToAsync("/main");
-        await MC.Shell.Current.GoToAsync("//LoginPage");
+        await MC.Shell.Current.GoToAsync("//NewItemPage");
     }
-
 }

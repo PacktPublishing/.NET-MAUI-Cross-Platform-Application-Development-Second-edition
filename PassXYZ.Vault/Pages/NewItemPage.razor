@@ -1,12 +1,46 @@
 ﻿@page "/new"
 @using MC = Microsoft.Maui.Controls
+@using PassXYZ.Vault.Models
+@using PassXYZ.Vault.Services
+@inject IDataStore<Item> dataStore
 
 <ContentPage>
-    <VerticalStackLayout>
-        <Label>NewItemPage</Label>
+    <VerticalStackLayout Spacing="3" Padding="15">
+        <Label Text="Name" />
+        <Entry Text="@Name" />
+        <Label Text="Description" />
+        <Editor Text="@Description" Margin="0" />
+        <StackLayout Orientation="StackOrientation.Horizontal">
+            <Button Text="Cancel" OnClick="OnCancelClicked" HorizontalOptions="LayoutOptions.FillAndExpand"></Button>
+            <Button Text="Save" OnClick="OnSaveClicked" HorizontalOptions="LayoutOptions.FillAndExpand"></Button>
+        </StackLayout>
     </VerticalStackLayout>
 </ContentPage>
 
 @code {
+    string Name;
+    string Description;
 
+    private async void OnCancelClicked()
+    {
+        await MC.Shell.Current.GoToAsync("..");
+    }
+
+    private async void OnSaveClicked()
+    {
+        Item newItem = new()
+            {
+                Id = Guid.NewGuid().ToString(),
+                Name = Name,
+                Description = Description
+            };
+
+        _ = await dataStore.AddItemAsync(newItem);
+        Name = string.Empty;
+        Description = string.Empty;
+
+        //StateHasChanged();
+        // This will pop the current page off the navigation stack
+        await MC.Shell.Current.GoToAsync("..");
+    }
 }

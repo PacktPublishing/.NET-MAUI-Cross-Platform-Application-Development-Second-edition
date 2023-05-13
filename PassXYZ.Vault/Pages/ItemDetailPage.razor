@@ -5,14 +5,10 @@
 
 <ContentPage>
     <VerticalStackLayout Spacing="3" Padding="15">
+        <Label Text="Name:" FontAttributes="FontAttributes.Bold" />
         <Label Padding="10">@Item.Name</Label>
+        <Label Text="Description:" FontAttributes="FontAttributes.Bold" />
         <Label Padding="10">@Item.Description</Label>
-        <StackLayout Orientation="StackOrientation.Horizontal">
-            <Button Text="Save" HorizontalOptions="LayoutOptions.FillAndExpand"
-                    OnClick="OnSaveClick" />
-            <Button Text="Cancel" HorizontalOptions="LayoutOptions.FillAndExpand"
-                    OnClick="OnCancelClick" />
-        </StackLayout>
     </VerticalStackLayout>
 </ContentPage>
 
@@ -20,13 +16,4 @@
 @code {
     [Parameter] public Item Item { get; set; }
 
-    private async Task OnSaveClick()
-    {
-        await Navigation.PopModalAsync();
-    }
-
-    private async Task OnCancelClick()
-    {
-        await Navigation.PopModalAsync();
-    }
 }

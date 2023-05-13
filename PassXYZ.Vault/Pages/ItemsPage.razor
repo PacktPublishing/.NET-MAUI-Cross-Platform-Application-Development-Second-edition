@@ -8,11 +8,28 @@
 @using PassXYZ.Vault.Pages
 @using PassXYZ.Vault.Services
 
+@inject Navigation Navigation
 
 <ContentPage OnAppearing="OnAppearing">
-    <ListView ItemsSource="Items">
-        <ItemTemplate>
-            <ItemViewCell Item="@context"></ItemViewCell>
-        </ItemTemplate>
-    </ListView>
+    <ToolbarItems>
+        <ToolbarItem Text="Add" OnClick="AddItem" IconImageSource="@(new FontImageSource{FontFamily = "FontAwesomeSolid",
+              Color=Colors.Black, Glyph=FontAwesomeSolid.PlusCircle})" />
+    </ToolbarItems>
+
+    <ChildContent>
+        <ListView ItemsSource="Items" VerticalOptions="LayoutOptions.FillAndExpand" RowHeight="84">
+            <ItemTemplate>
+                <ItemViewCell Item="@context"></ItemViewCell>
+            </ItemTemplate>
+        </ListView>
+    </ChildContent>
 </ContentPage>
+
+@code 
+{
+    private async void AddItem()
+    {
+        //await MC.Shell.Current.GoToAsync(nameof(NewItemPage));
+        await Navigation.PushAsync(@<NewItemPage />);
+    }
+}

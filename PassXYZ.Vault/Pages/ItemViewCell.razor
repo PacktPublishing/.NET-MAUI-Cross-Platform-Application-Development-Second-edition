@@ -1,4 +1,5 @@
-﻿@using Microsoft.Extensions.Logging
+﻿@using MC = Microsoft.Maui.Controls
+@using Microsoft.Extensions.Logging
 @using PassXYZ.Vault.Models
 @using PassXYZ.Vault.Resources.Styles
 
@@ -27,6 +28,6 @@
     private async Task OnTap()
     {
         logger.LogDebug("OnTapped: {Name} is tapped", Item.Name);
-        await Navigation.PushModalAsync(@<ItemDetailPage Item="Item" />);
+        await Navigation.PushAsync(@<ItemDetailPage Item="Item" />);
     }
 }

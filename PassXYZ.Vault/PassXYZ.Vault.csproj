@@ -49,9 +49,8 @@
   </PropertyGroup>
 
 	<PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
-	  <ProvisioningType>manual</ProvisioningType>
-	  <CodesignKey>iPhone Distribution: Shugao Ye (W9WL9WPD24)</CodesignKey>
-	  <CodesignProvision>passxyz_2023</CodesignProvision>
+	  <CodesignKey>Apple Development: Created via API (X8CY3Q3W4V)</CodesignKey>
+	  <CodesignProvision>VS: com.passxyz.vault2 Development</CodesignProvision>
 	</PropertyGroup>
 
 	<ItemGroup>

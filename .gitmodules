@@ -2,3 +2,47 @@
 	path = Chapter01
 	url = https://github.com/PacktPublishing/.NET-MAUI-Cross-Platform-Application-Development-Second-edition
 	branch = 2nd/chapter01
+[submodule "Chapter02"]
+	path = Chapter02
+	url = https://github.com/PacktPublishing/.NET-MAUI-Cross-Platform-Application-Development-Second-edition
+	branch = 2nd/chapter02
+[submodule "Chapter03"]
+	path = Chapter03
+	url = https://github.com/PacktPublishing/.NET-MAUI-Cross-Platform-Application-Development-Second-edition
+	branch = 2nd/chapter03
+[submodule "Chapter04"]
+	path = Chapter04
+	url = https://github.com/PacktPublishing/.NET-MAUI-Cross-Platform-Application-Development-Second-edition
+	branch = 2nd/chapter04
+[submodule "Chapter05"]
+	path = Chapter05
+	url = https://github.com/PacktPublishing/.NET-MAUI-Cross-Platform-Application-Development-Second-edition
+	branch = 2nd/chapter05
+[submodule "Chapter06"]
+	path = Chapter06
+	url = https://github.com/PacktPublishing/.NET-MAUI-Cross-Platform-Application-Development-Second-edition
+	branch = 2nd/chapter06
+[submodule "Chapter07"]
+	path = Chapter07
+	url = https://github.com/PacktPublishing/.NET-MAUI-Cross-Platform-Application-Development-Second-edition
+	branch = 2nd/chapter07
+[submodule "Chapter08"]
+	path = Chapter08
+	url = https://github.com/PacktPublishing/.NET-MAUI-Cross-Platform-Application-Development-Second-edition
+	branch = 2nd/chapter08
+[submodule "Chapter09"]
+	path = Chapter09
+	url = https://github.com/PacktPublishing/.NET-MAUI-Cross-Platform-Application-Development-Second-edition
+	branch = 2nd/chapter09
+[submodule "Chapter10"]
+	path = Chapter10
+	url = https://github.com/PacktPublishing/.NET-MAUI-Cross-Platform-Application-Development-Second-edition
+	branch = 2nd/chapter10
+[submodule "Chapter11"]
+	path = Chapter11
+	url = https://github.com/PacktPublishing/.NET-MAUI-Cross-Platform-Application-Development-Second-edition
+	branch = 2nd/chapter11
+[submodule "Chapter12"]
+	path = Chapter12
+	url = https://github.com/PacktPublishing/.NET-MAUI-Cross-Platform-Application-Development-Second-edition
+	branch = 2nd/chapter12

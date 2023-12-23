@@ -1,0 +1,4 @@
+[submodule "Chapter01"]
+	path = Chapter01
+	url = https://github.com/PacktPublishing/.NET-MAUI-Cross-Platform-Application-Development-Second-edition
+	branch = 2nd/chapter01

@@ -26,6 +26,7 @@ public static class MauiProgram
 #if DEBUG
         builder.Logging.AddDebug();
 		builder.Logging.SetMinimumLevel(LogLevel.Debug);
+        builder.Services.AddBlazorWebViewDeveloperTools();
 #endif
         builder.Services.AddSingleton<IDataStore<Item>, DataStore>();
         builder.Services.AddSingleton<IUserService<User>, UserService>();

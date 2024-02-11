@@ -5,7 +5,13 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PassXYZ.Vault", "PassXYZ.Vault\PassXYZ.Vault.csproj", "{315AE110-DD82-4E3E-AC7B-C3E3FB541F8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassXYZ.Vault.Tests", "PassXYZ.Vault.Tests\PassXYZ.Vault.Tests.csproj", "{9D39CB02-54BF-40EF-B5A7-147430265B1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PassXYZ.Vault.Tests", "PassXYZ.Vault.Tests\PassXYZ.Vault.Tests.csproj", "{9D39CB02-54BF-40EF-B5A7-147430265B1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHub", "GitHub", "{1464A08F-6978-4CAA-BA1B-E67BEE0C3AE9}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\passxyz-ci-macos.yml = .github\workflows\passxyz-ci-macos.yml
+		.github\workflows\passxyz-ci-windows.yml = .github\workflows\passxyz-ci-windows.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
